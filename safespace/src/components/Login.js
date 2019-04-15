@@ -2,9 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import Loader from "react-loader-spinner";
 
-import { login, fetchMessages } from "../actions";
+import { login } from "../actions/loginAction";
 
-//build out a simple login form with username and password inputs and a submit button (design this however you would like).
 class Login extends React.Component {
   state = {
     credentials: {
@@ -22,7 +21,6 @@ class Login extends React.Component {
     });
   };
 
-  //When the request returns, use the history object in your Login component to navigate your user to your FriendsList route
   login = e => {
     e.preventDefault();
     this.props
@@ -76,5 +74,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { login, fetchMessages }
+  { login }
 )(Login);

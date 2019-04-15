@@ -1,6 +1,3 @@
-/*
-  Be sure to import in all of the action types from `../actions`
-*/
 import {
   FETCH_MESSAGES_START,
   FETCH_MESSAGES_SUCCESS,
@@ -19,7 +16,7 @@ const initialMessageListState = {
   error: null
 };
 
-const messageListReducer = (state = initialMessageListState, action) => {
+export const messageListReducer = (state = initialMessageListState, action) => {
   switch (action.type) {
     case FETCH_MESSAGES_START:
       return {
@@ -61,5 +58,3 @@ const messageListReducer = (state = initialMessageListState, action) => {
       return state;
   }
 };
-
-export default messageListReducer;
