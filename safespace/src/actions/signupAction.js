@@ -9,7 +9,7 @@ export const SIGNUP_FAILURE = "SIGNUP_FAIL";
 export const signup = signup => dispatch => {
   dispatch({ type: SIGNUP_START });
   axios
-    .post(`${baseUrl}/api/register`, signup)
+    .post(`${baseUrl}/api/auth/register`, signup)
     .then(res => {
       dispatch({ type: SIGNUP_SUCCESS, payload: res.data });
     })

@@ -4,7 +4,6 @@ import { signup } from "../actions/signupAction";
 
 class Signup extends Component {
   state = {
-    name: "",
     username: "",
     password: ""
   };
@@ -24,14 +23,6 @@ class Signup extends Component {
       <div>
         <h2>{this.props.displayText}</h2>
         <form onSubmit={this.signup}>
-          <p>Name</p>
-          <input
-            onChange={this.input}
-            placeholder="Name"
-            value={this.state.name}
-            name="name"
-            type="text"
-          />
           <p>UserName</p>
           <input
             onChange={this.input}
