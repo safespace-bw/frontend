@@ -3,6 +3,7 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import Nav from "./components/Nav";
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
@@ -15,17 +16,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <ul>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/signup">Sign Up</Link>
-            </li>
-            <li>
-              <Link to="/messagelist">My Messages</Link>
-            </li>
-          </ul>
+          <Nav />
 
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />

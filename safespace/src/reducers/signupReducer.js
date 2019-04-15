@@ -1,4 +1,8 @@
-import { SIGNUP_START, SIGNUP_SUCCESS, SIGNUP_FAIL } from "../actions";
+import {
+  SIGNUP_START,
+  SIGNUP_SUCCESS,
+  SIGNUP_FAILURE
+} from "../actions/signupAction";
 
 const initialSignupState = {
   isLoading: false,
@@ -8,23 +12,23 @@ const initialSignupState = {
 
 export const signupReducer = (state = initialSignupState, action) => {
   switch (action.type) {
-    case SEND_SIGNUP:
+    case SIGNUP_START:
       return {
         ...state,
         isLoading: true,
-        displayText: "signing up..."
+        displayText: "Signing up..."
       };
     case SIGNUP_SUCCESS:
       return {
         ...state,
         registered: true,
-        displayText: "welcome!"
+        displayText: "Welcome!"
       };
-    case SIGNUP_FAIL:
+    case SIGNUP_FAILURE:
       return {
         ...state,
         isLoading: false,
-        displayText: "error",
+        displayText: "Signup error",
         error: action.payload
       };
     default:
