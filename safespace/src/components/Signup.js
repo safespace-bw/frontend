@@ -20,29 +20,53 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
-        <h2>{this.props.displayText}</h2>
-        <form onSubmit={this.signup}>
-          <p>UserName</p>
-          <input
-            onChange={this.input}
-            placeholder="Username"
-            value={this.state.username}
-            name="username"
-            type="text"
-          />
-          <p>Password</p>
-          <input
-            onChange={this.input}
-            placeholder="Password"
-            value={this.state.password}
-            name="password"
-            type="password"
-          />
-          <button className="signup-button" type="submit">
-            sign up
-          </button>
-        </form>
+      <div className="container">
+        <div className="d-flex justify-content-center h-100">
+          <div className="card">
+            <div className="card-header">
+              <h2>{this.props.displayText}</h2>
+            </div>
+            <div class="card-body">
+              <form onSubmit={this.signup}>
+                <div class="input-group form-group">
+                  <div class="input-group-prepend">
+                    <p>UserName</p>
+                    <span class="input-group-text">
+                      <i class="fas fa-user" />
+                    </span>
+                  </div>
+                  <input
+                    class="form-control"
+                    onChange={this.input}
+                    placeholder="Username"
+                    value={this.state.username}
+                    name="username"
+                    type="text"
+                  />
+                </div>
+                <div class="input-group form-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fas fa-key" />
+                    </span>
+                  </div>
+                  <input
+                    class="form-control"
+                    onChange={this.input}
+                    placeholder="Password"
+                    value={this.state.password}
+                    name="password"
+                    type="password"
+                  />
+                </div>
+
+                <button className="btn float-right login_btn" type="submit">
+                  sign up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
