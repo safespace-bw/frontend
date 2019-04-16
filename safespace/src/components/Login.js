@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Loader from "react-loader-spinner";
+import "./login.css";
 
 import { login } from "../actions/loginAction";
 
@@ -29,31 +29,55 @@ class Login extends React.Component {
   };
   render() {
     return (
-      <div>
-        <form onSubmit={this.login}>
-          <input
-            type="text"
-            name="username"
-            value={this.state.credentials.username}
-            onChange={this.handleChange}
-            placeholder="username"
-          />
-          <input
-            type="password"
-            name="password"
-            value={this.state.credentials.password}
-            onChange={this.handleChange}
-            placeholder="password"
-          />
-          <button>
-            {" "}
-            {this.props.loggingIn ? (
-              <Loader type="ThreeDots" color="#1f2a38" height="12" width="26" />
-            ) : (
-              "Log in"
-            )}
-          </button>
-        </form>
+      <div className="container">
+        <div className="d-flex justify-content-center h-100">
+          <div className="card">
+            <div className="card-header">
+              <h2>Login</h2>
+            </div>
+            <div className="card-body">
+              <form onSubmit={this.login}>
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fas fa-user" />
+                    </span>
+                  </div>
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="username"
+                    value={this.state.credentials.username}
+                    onChange={this.handleChange}
+                    placeholder="Username"
+                  />
+                </div>
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fas fa-key" />
+                    </span>
+                  </div>
+                  <input
+                    className="form-control"
+                    type="password"
+                    name="password"
+                    value={this.state.credentials.password}
+                    onChange={this.handleChange}
+                    placeholder="Password"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="submit"
+                    value="Sign Up"
+                    className="btn float-right login_btn"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

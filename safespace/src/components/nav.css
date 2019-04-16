@@ -1,0 +1,12 @@
+/* Nav styles */
+
+.navbar {
+  background-color: rgb(129, 210, 199, 0.7);
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: black;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: gray;
+}

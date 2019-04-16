@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../App.css";
+import "./nav.css";
 
 const Nav = () => {
   return (
@@ -25,7 +25,7 @@ const Nav = () => {
         <ul className="nav navbar-nav navbar-right">
           <li>
             <NavLink to="/signup">
-              <span className="glyphicon glyphicon-user" /> Sign Up{" "}
+              <i class="far fa-user" /> Sign Up{" "}
             </NavLink>
           </li>
           <li>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signup } from "../actions/signupAction";
+import "./signup.css";
 
 class Signup extends Component {
   state = {
@@ -26,43 +27,45 @@ class Signup extends Component {
             <div className="card-header">
               <h2>{this.props.displayText}</h2>
             </div>
-            <div class="card-body">
+            <div className="card-body">
               <form onSubmit={this.signup}>
-                <div class="input-group form-group">
-                  <div class="input-group-prepend">
-                    <p>UserName</p>
-                    <span class="input-group-text">
-                      <i class="fas fa-user" />
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fas fa-user" />
                     </span>
                   </div>
                   <input
-                    class="form-control"
+                    className="form-control"
                     onChange={this.input}
-                    placeholder="Username"
+                    placeholder="Create Username"
                     value={this.state.username}
                     name="username"
                     type="text"
                   />
                 </div>
-                <div class="input-group form-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="fas fa-key" />
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fas fa-key" />
                     </span>
                   </div>
                   <input
-                    class="form-control"
+                    className="form-control"
                     onChange={this.input}
-                    placeholder="Password"
+                    placeholder="Create Password"
                     value={this.state.password}
                     name="password"
                     type="password"
                   />
                 </div>
-
-                <button className="btn float-right login_btn" type="submit">
-                  sign up
-                </button>
+                <div className="form-group">
+                  <input
+                    type="submit"
+                    value="Sign Up"
+                    className="btn float-right login_btn"
+                  />
+                </div>
               </form>
             </div>
           </div>
