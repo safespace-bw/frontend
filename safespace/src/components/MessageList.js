@@ -32,11 +32,11 @@ class MessageList extends React.Component {
   // };
 
   render() {
-    console.log(this.props.messages);
+    console.log(this.props);
     return (
       <>
         <MessageForm addMessage={this.addMessage} />
-        <div>
+        {/* <div>
           {this.props.messages.map((message, id) => {
             return (
               <Messages
@@ -47,7 +47,7 @@ class MessageList extends React.Component {
               />
             );
           })}
-        </div>
+        </div> */}
       </>
     );
   }

@@ -25,12 +25,12 @@ export const signupReducer = (state = initialSignupState, action) => {
         isLoading: true,
         displayText: "Signing up...",
         user: {
-          id: this.state.id,
-          username: this.state.username,
-          password: this.state.password,
-          created: this.state.created
+          id: state.user.id,
+          username: state.user.username,
+          password: state.user.password,
+          created: state.user.created
         },
-        token: action.payload.token
+        token: state.token
       };
     case SIGNUP_SUCCESS:
       return {
