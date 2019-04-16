@@ -3,6 +3,7 @@ import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions";
 const initialLoginState = {
   token: "",
   id: "",
+  displayText: "Log In",
   loggedIn: false,
   isLoading: false
 };
@@ -12,7 +13,8 @@ export const loginReducer = (state = initialLoginState, action) => {
     case LOGIN_START:
       return {
         ...state,
-        isLoading: true
+        isLoading: true,
+        displayText: "Logging In..."
       };
     case LOGIN_SUCCESS:
       return {
@@ -20,13 +22,15 @@ export const loginReducer = (state = initialLoginState, action) => {
         token: action.payload.token,
         id: action.payload.id,
         loggedIn: true,
-        isLoading: false
+        isLoading: false,
+        displayText: "Welcome!"
       };
     case LOGIN_FAILURE:
       return {
         ...state,
         isLoading: false,
-        error: action.payload
+        error: action.payload,
+        displayText: "Login Error"
       };
     default:
       return state;

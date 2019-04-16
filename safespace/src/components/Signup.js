@@ -9,7 +9,7 @@ class Signup extends Component {
     password: ""
   };
 
-  input = e => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -37,7 +37,7 @@ class Signup extends Component {
                   </div>
                   <input
                     className="form-control"
-                    onChange={this.input}
+                    onChange={this.handleChange}
                     placeholder="Create Username"
                     value={this.state.username}
                     name="username"
@@ -52,7 +52,7 @@ class Signup extends Component {
                   </div>
                   <input
                     className="form-control"
-                    onChange={this.input}
+                    onChange={this.handleChange}
                     placeholder="Create Password"
                     value={this.state.password}
                     name="password"

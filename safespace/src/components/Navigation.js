@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 import "./nav.css";
 
-const Nav = () => {
+const Navigation = () => {
   return (
     <nav className="navbar navbar-inverse">
       <div className="container-fluid">
@@ -25,12 +26,12 @@ const Nav = () => {
         <ul className="nav navbar-nav navbar-right">
           <li>
             <NavLink to="/signup">
-              <i class="far fa-user" /> Sign Up{" "}
+              <i className="fas fa-user" /> Sign Up{" "}
             </NavLink>
           </li>
           <li>
             <NavLink to="/login">
-              <span className="glyphicon glyphicon-log-in" /> Login{" "}
+              <i className="fas fa-sign-in-alt" /> Login
             </NavLink>
           </li>
         </ul>
@@ -39,4 +40,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navigation;

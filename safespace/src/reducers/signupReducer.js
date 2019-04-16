@@ -6,7 +6,7 @@ import {
 
 const initialSignupState = {
   isLoading: false,
-  displayText: "sign up",
+  displayText: "Sign Up",
   error: ""
 };
 

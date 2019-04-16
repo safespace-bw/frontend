@@ -33,7 +33,7 @@ class Login extends React.Component {
         <div className="d-flex justify-content-center h-100">
           <div className="card">
             <div className="card-header">
-              <h2>Login</h2>
+              <h2>{this.props.displayText}</h2>
             </div>
             <div className="card-body">
               <form onSubmit={this.login}>
@@ -87,6 +87,7 @@ const mapStateToProps = state => {
   return {
     loggingIn: state.loggingIn,
     error: state.error,
+    displayText: state.login.displayText,
     messages: state.messages
   };
 };

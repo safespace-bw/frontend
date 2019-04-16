@@ -3,7 +3,7 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Nav from "./components/Nav";
+import Navigation from "./components/Navigation";
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
@@ -16,9 +16,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Nav />
+          <Navigation />
 
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={Signup} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <PrivateRoute
