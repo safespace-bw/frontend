@@ -8,11 +8,15 @@ import {
 } from "../actions";
 
 const initialMessageListState = {
-  messages: [],
+  messages: {
+    user_id: "",
+    body: "",
+    scheduled: ""
+  },
   fetchingMessages: false,
   addingMessage: false,
-  updatingMessage: false,
-  deletingMessage: false,
+  // updatingMessage: false,
+  // deletingMessage: false,
   error: null
 };
 
@@ -21,14 +25,15 @@ export const messageListReducer = (state = initialMessageListState, action) => {
     case FETCH_MESSAGES_START:
       return {
         ...state,
-        fetchingMessages: true
+        fetchingMessages: true,
+        error: ""
       };
     case FETCH_MESSAGES_SUCCESS:
       return {
         ...state,
-        error: null,
         fetchingMessages: false,
-        messages: action.payload
+        messages: action.payload,
+        error: ""
       };
     case FETCH_MESSAGES_FAILURE:
       return {
@@ -39,18 +44,25 @@ export const messageListReducer = (state = initialMessageListState, action) => {
     case ADD_MESSAGE_START:
       return {
         ...state,
-        fetchingMessages: true
+        addingMessage: true,
+        error: "",
+        messages: {
+          user_id: this.state.user_id,
+          body: this.state.body,
+          scheduled: this.state.scheduled
+        }
       };
     case ADD_MESSAGE_SUCCESS:
       return {
         ...state,
-        fetchingMessages: false,
-        messages: action.payload
+        addingMessage: false,
+        messages: action.payload,
+        error: ""
       };
     case ADD_MESSAGE_FAILURE:
       return {
         ...state,
-        fetchingMessages: false,
+        addingMessage: false,
         error: action.payload
       };
 

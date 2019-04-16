@@ -12,6 +12,7 @@ export const signup = signup => dispatch => {
     .post(`${baseUrl}/api/auth/register`, signup)
     .then(res => {
       dispatch({ type: SIGNUP_SUCCESS, payload: res.data });
+      console.log(res.data);
     })
     .catch(err => dispatch({ type: SIGNUP_FAILURE, payload: err }));
 };
