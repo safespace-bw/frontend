@@ -9,13 +9,14 @@ class MessageForm extends React.Component {
   };
 
   input = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ text: e.target.value });
   };
 
   addMessage = e => {
     e.preventDefault();
-    console.log(this.state);
-    this.props.addMessage({ text: this.state.text });
+    console.log("checking text", this.state.text);
+    console.log({ body: this.state.text, user_id: this.props.id });
+    this.props.addMessage({ body: this.state.text, user_id: this.props.id });
     this.setState({
       ...this.state,
       text: ""
@@ -30,6 +31,7 @@ class MessageForm extends React.Component {
             Create a Positive Message
           </label>
           <textarea
+            onChange={this.input}
             placeholder="think happy thoughts!!!"
             className="form-control"
             id="exampleFormControlTextarea1"
@@ -48,14 +50,15 @@ class MessageForm extends React.Component {
   }
 }
 
-const mapStateToPops = state => {
+const mapStateToProps = state => {
   console.log(state);
   return {
-    smurfs: state.smurfs
+    text: state.text,
+    id: state.login.id
   };
 };
 
 export default connect(
-  mapStateToPops,
+  mapStateToProps,
   { addMessage }
 )(MessageForm);

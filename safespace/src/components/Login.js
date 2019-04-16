@@ -70,7 +70,7 @@ class Login extends React.Component {
                 <div className="form-group">
                   <input
                     type="submit"
-                    value="Sign Up"
+                    value="Log In"
                     className="btn float-right login_btn"
                   />
                 </div>

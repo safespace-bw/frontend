@@ -47,9 +47,9 @@ export const messageListReducer = (state = initialMessageListState, action) => {
         addingMessage: true,
         error: "",
         messages: {
-          user_id: this.state.user_id,
-          body: this.state.body,
-          scheduled: this.state.scheduled
+          user_id: state.messages.user_id,
+          body: state.messages.body,
+          scheduled: state.messages.scheduled
         }
       };
     case ADD_MESSAGE_SUCCESS:

@@ -16,10 +16,10 @@ export const DELETE_MESSAGE_START = "DELETE_MESSAGE_START";
 export const DELETE_MESSAGE_SUCCESS = "DELETE_MESSAGE_SUCCESS";
 export const DELETE_MESSAGE_FAILURE = "DELETE_MESSAGE_FAILURE";
 
-export const fetchMessages = () => dispatch => {
+export const fetchMessages = id => dispatch => {
   dispatch({ type: FETCH_MESSAGES_START });
   return axiosAuth()
-    .get(`${baseUrl}/api/messages`)
+    .get(`${baseUrl}/api/messages/${id}`)
     .then(res => {
       dispatch({
         type: FETCH_MESSAGES_SUCCESS,

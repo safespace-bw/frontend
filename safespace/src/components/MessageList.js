@@ -32,7 +32,7 @@ class MessageList extends React.Component {
   // };
 
   render() {
-    console.log(this.props);
+    console.log("props", this.props);
     return (
       <>
         <MessageForm addMessage={this.addMessage} />
