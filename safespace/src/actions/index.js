@@ -19,6 +19,14 @@ export {
   ADD_MESSAGE_START,
   ADD_MESSAGE_SUCCESS,
   ADD_MESSAGE_FAILURE,
+  UPDATE_MESSAGE_START,
+  UPDATE_MESSAGE_SUCCESS,
+  UPDATE_MESSAGE_FAILURE,
+  DELETE_MESSAGE_START,
+  DELETE_MESSAGE_SUCCESS,
+  DELETE_MESSAGE_FAILURE,
   fetchMessages,
-  addMessage
+  addMessage,
+  updateMessage,
+  deleteMessage
 } from "./messageListAction";

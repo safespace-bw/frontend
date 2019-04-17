@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./login.css";
+import "../css/login.css";
 
 import { login } from "../actions/loginAction";
 
@@ -24,7 +24,7 @@ class Login extends React.Component {
   login = e => {
     e.preventDefault();
     this.props.login(this.state.credentials).then(() => {
-      this.props.history.push("/");
+      this.props.history.push("/messagelist");
     });
   };
   render() {
@@ -70,7 +70,7 @@ class Login extends React.Component {
                 <div className="form-group">
                   <input
                     type="submit"
-                    value="Sign Up"
+                    value="Log In"
                     className="btn float-right login_btn"
                   />
                 </div>
@@ -85,7 +85,7 @@ class Login extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    loggingIn: state.loggingIn,
+    loggedIn: state.loggedIn,
     error: state.error,
     displayText: state.login.displayText,
     messages: state.messages

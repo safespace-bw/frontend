@@ -1,24 +1,54 @@
 import React from "react";
 import Messages from "./Messages";
-import { fetchMessages, addMessage } from "../actions/messageListAction";
+import MessageForm from "./MessageForm";
+import {
+  fetchMessages,
+  addMessage,
+  updateMessage,
+  deleteMessage
+} from "../actions/messageListAction";
 import { connect } from "react-redux";
 
 class MessageList extends React.Component {
+  state = {
+    messages: []
+  };
+
   componentDidMount() {
     this.props.fetchMessages();
   }
 
-  addMsg = () => {
-    this.props.addMsg();
+  addMessage = message => {
+    console.log(this.props);
+    this.props.addMessage(this.props.id, message);
   };
 
+  // updateMessage = () => {
+  //   this.props.updateMessage();
+  // };
+
+  // deleteMessage = () => {
+  //   this.props.deleteMessage();
+  // };
+
   render() {
+    console.log("messages", this.props.messages);
     return (
-      <div>
-        {this.props.messages.map((message, id) => {
-          return <Messages message={message} key={id} />;
-        })}
-      </div>
+      <>
+        <MessageForm addMessage={this.addMessage} />
+        <div>
+          {this.props.messages.map((message, id) => {
+            return (
+              <Messages
+                message={message}
+                deleteMessage={this.deleteMessage}
+                updateMessage={this.updateMessage}
+                key={id}
+              />
+            );
+          })}
+        </div>
+      </>
     );
   }
 }
@@ -26,7 +56,12 @@ class MessageList extends React.Component {
 const mapStateToPops = state => {
   console.log(state);
   return {
-    messages: state.messages
+    fetchingMessages: state.list.fetchingMessages,
+    addingMessage: state.list.addingMessage,
+    messages: state.list.messages,
+    error: state.list.error,
+    id: state.login.id,
+    token: state.login.token
   };
 };
 

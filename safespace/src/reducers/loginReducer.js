@@ -20,7 +20,7 @@ export const loginReducer = (state = initialLoginState, action) => {
       return {
         ...state,
         token: action.payload.token,
-        id: action.payload.id,
+        id: action.payload.user_id,
         loggedIn: true,
         isLoading: false,
         displayText: "Welcome!"

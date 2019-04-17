@@ -7,7 +7,14 @@ import {
 const initialSignupState = {
   isLoading: false,
   displayText: "Sign Up",
-  error: ""
+  error: "",
+  user: {
+    id: "",
+    username: "",
+    password: "",
+    created: ""
+  },
+  token: ""
 };
 
 export const signupReducer = (state = initialSignupState, action) => {
@@ -16,7 +23,14 @@ export const signupReducer = (state = initialSignupState, action) => {
       return {
         ...state,
         isLoading: true,
-        displayText: "Signing up..."
+        displayText: "Signing up...",
+        user: {
+          id: state.user.id,
+          username: state.user.username,
+          password: state.user.password,
+          created: state.user.created
+        },
+        token: state.token
       };
     case SIGNUP_SUCCESS:
       return {
