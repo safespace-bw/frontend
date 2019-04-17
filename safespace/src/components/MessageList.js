@@ -20,19 +20,25 @@ class MessageList extends React.Component {
 
   addMessage = message => {
     console.log(this.props);
+    console.log(this.props.id);
     this.props.addMessage(this.props.id, message);
   };
 
-  // updateMessage = () => {
-  //   this.props.updateMessage();
-  // };
+  updateMessage = (id, message) => {
+    console.log(id);
+    this.props.updateMessage(id, this.props.id, message);
+  };
 
-  // deleteMessage = () => {
-  //   this.props.deleteMessage();
-  // };
+  deleteMessage = (e, id) => {
+    e.preventDefault();
+    console.log(id);
+    console.log(this.props);
+    console.log(this.props.id);
+    this.props.deleteMessage(id, this.props.id);
+  };
 
   render() {
-    console.log("messages", this.props.messages);
+    console.log("this.props.messages:", this.props.messages);
     return (
       <>
         <MessageForm addMessage={this.addMessage} />
@@ -41,8 +47,8 @@ class MessageList extends React.Component {
             return (
               <Messages
                 message={message}
-                deleteMessage={this.deleteMessage}
                 updateMessage={this.updateMessage}
+                deleteMessage={this.deleteMessage}
                 key={id}
               />
             );
@@ -58,6 +64,8 @@ const mapStateToPops = state => {
   return {
     fetchingMessages: state.list.fetchingMessages,
     addingMessage: state.list.addingMessage,
+    updatingMessage: state.list.updatingMessage,
+    deletingMessage: state.list.deletingMessage,
     messages: state.list.messages,
     error: state.list.error,
     id: state.login.id,
@@ -67,5 +75,5 @@ const mapStateToPops = state => {
 
 export default connect(
   mapStateToPops,
-  { fetchMessages, addMessage }
+  { fetchMessages, addMessage, updateMessage, deleteMessage }
 )(MessageList);

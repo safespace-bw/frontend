@@ -62,20 +62,40 @@ export const addMessage = message => dispatch => {
     })
     .catch(err => dispatch({ type: ADD_MESSAGE_FAILURE, payload: err }));
 };
-export const updateMessage = (postId, userId, x) => dispatch => {
+export const updateMessage = postId => dispatch => {
+  const token = localStorage.getItem("token");
+  const id = localStorage.getItem("id");
+
+  const headers = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${token}`,
+      id: `${id}`
+    }
+  };
   dispatch({ type: UPDATE_MESSAGE_START });
-  return axiosAuth()
-    .put(`${baseUrl}/api/messages/${postId}`, x)
+  return axios
+    .put(`${baseUrl}/api/messages/${postId}`, headers)
     .then(res => dispatch({ type: UPDATE_MESSAGE_SUCCESS, payload: res.data }))
-    .then(() => fetchMessages(userId)(dispatch))
+    .then(() => fetchMessages()(dispatch))
     .catch(err => dispatch({ type: UPDATE_MESSAGE_FAILURE, payload: err }));
 };
 
-export const deleteMessage = (id, userId) => dispatch => {
+export const deleteMessage = postId => dispatch => {
+  const token = localStorage.getItem("token");
+  const id = localStorage.getItem("id");
+
+  const headers = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${token}`,
+      id: `${id}`
+    }
+  };
   dispatch({ type: DELETE_MESSAGE_START });
-  return axiosAuth()
-    .delete(`${baseUrl}/api/messages/${id}`)
+  return axios
+    .delete(`${baseUrl}/api/messages/${postId}`, headers)
     .then(res => dispatch({ type: DELETE_MESSAGE_SUCCESS, payload: res.data }))
-    .then(() => fetchMessages(userId)(dispatch))
+    .then(() => fetchMessages()(dispatch))
     .catch(err => dispatch({ type: DELETE_MESSAGE_FAILURE, payload: err }));
 };

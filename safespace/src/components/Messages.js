@@ -69,6 +69,7 @@ class Messages extends React.Component {
   };
 
   updateMessage = e => {
+    console.log(this.props.message);
     e.preventDefault();
     this.props.updateMessage(this.props.message.id, {
       text: this.state.newText
