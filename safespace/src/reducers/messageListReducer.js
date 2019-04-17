@@ -23,12 +23,14 @@ const initialMessageListState = {
 export const messageListReducer = (state = initialMessageListState, action) => {
   switch (action.type) {
     case FETCH_MESSAGES_START:
+      console.log("fetch msg start", action.payload);
       return {
         ...state,
         fetchingMessages: true,
         error: ""
       };
     case FETCH_MESSAGES_SUCCESS:
+      console.log("fetch msg success", action.payload);
       return {
         ...state,
         fetchingMessages: false,
@@ -46,11 +48,11 @@ export const messageListReducer = (state = initialMessageListState, action) => {
         ...state,
         addingMessage: true,
         error: "",
-        messages: {
+        messages: state.messages.push({
           user_id: state.messages.user_id,
           body: state.messages.body,
           scheduled: state.messages.scheduled
-        }
+        })
       };
     case ADD_MESSAGE_SUCCESS:
       return {

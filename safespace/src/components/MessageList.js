@@ -15,7 +15,7 @@ class MessageList extends React.Component {
   };
 
   componentDidMount() {
-    this.props.fetchMessages(this.props.id);
+    this.props.fetchMessages();
   }
 
   addMessage = message => {
@@ -32,11 +32,11 @@ class MessageList extends React.Component {
   // };
 
   render() {
-    console.log("props", this.props);
+    console.log("messages", this.props.messages);
     return (
       <>
         <MessageForm addMessage={this.addMessage} />
-        {/* <div>
+        <div>
           {this.props.messages.map((message, id) => {
             return (
               <Messages
@@ -47,7 +47,7 @@ class MessageList extends React.Component {
               />
             );
           })}
-        </div> */}
+        </div>
       </>
     );
   }

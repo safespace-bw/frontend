@@ -12,6 +12,8 @@ class MessageForm extends React.Component {
     this.setState({ text: e.target.value });
   };
 
+
+
   addMessage = e => {
     e.preventDefault();
     console.log("checking text", this.state.text);
@@ -32,6 +34,7 @@ class MessageForm extends React.Component {
           </label>
           <textarea
             onChange={this.input}
+            value={this.state.text}
             placeholder="think happy thoughts!!!"
             className="form-control"
             id="exampleFormControlTextarea1"

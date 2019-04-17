@@ -84,7 +84,7 @@ class Messages extends React.Component {
       <MessageBox>
         <div className="top-box">
           <div className="text-box">
-            <p>{this.props.message.text}</p>
+            <p>{this.props.message.body}</p>
           </div>
           <div className="button-box">
             <button className="msg-button" onClick={this.formToggle}>
