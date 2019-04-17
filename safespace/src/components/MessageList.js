@@ -21,12 +21,12 @@ class MessageList extends React.Component {
   addMessage = message => {
     console.log(this.props);
     console.log(this.props.id);
-    this.props.addMessage(this.props.id, message);
+    this.props.addMessage(message);
   };
 
   updateMessage = (id, message) => {
     console.log(id);
-    this.props.updateMessage(id, this.props.id, message);
+    this.props.updateMessage(id, message);
   };
 
   deleteMessage = (e, id) => {
@@ -34,7 +34,7 @@ class MessageList extends React.Component {
     console.log(id);
     console.log(this.props);
     console.log(this.props.id);
-    this.props.deleteMessage(id, this.props.id);
+    this.props.deleteMessage(id);
   };
 
   render() {

@@ -2,6 +2,7 @@ import axiosAuth from "../utils/axiosAuth";
 import axios from "axios";
 
 const baseUrl = "https://safespace-bw3.herokuapp.com";
+// const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 export const FETCH_MESSAGES_START = "FETCH_MESSAGES_START";
 export const FETCH_MESSAGES_SUCCESS = "FETCH_MESSAGES_SUCCESS";
@@ -51,6 +52,7 @@ export const addMessage = message => dispatch => {
   };
 
   dispatch({ type: ADD_MESSAGE_START });
+  console.log("message", message);
   return axios
     .post(`${baseUrl}/api/messages`, message, headers)
     .then(res => {
@@ -62,7 +64,8 @@ export const addMessage = message => dispatch => {
     })
     .catch(err => dispatch({ type: ADD_MESSAGE_FAILURE, payload: err }));
 };
-export const updateMessage = postId => dispatch => {
+export const updateMessage = (postId, message) => dispatch => {
+  console.log("post id:", postId);
   const token = localStorage.getItem("token");
   const id = localStorage.getItem("id");
 
@@ -75,7 +78,7 @@ export const updateMessage = postId => dispatch => {
   };
   dispatch({ type: UPDATE_MESSAGE_START });
   return axios
-    .put(`${baseUrl}/api/messages/${postId}`, headers)
+    .put(`${baseUrl}/api/messages/${postId}`, message, headers)
     .then(res => dispatch({ type: UPDATE_MESSAGE_SUCCESS, payload: res.data }))
     .then(() => fetchMessages()(dispatch))
     .catch(err => dispatch({ type: UPDATE_MESSAGE_FAILURE, payload: err }));
