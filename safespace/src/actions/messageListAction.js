@@ -2,6 +2,7 @@ import axiosAuth from "../utils/axiosAuth";
 import axios from "axios";
 
 const baseUrl = "https://safespace-bw3.herokuapp.com";
+// const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 export const FETCH_MESSAGES_START = "FETCH_MESSAGES_START";
 export const FETCH_MESSAGES_SUCCESS = "FETCH_MESSAGES_SUCCESS";
@@ -51,6 +52,7 @@ export const addMessage = message => dispatch => {
   };
 
   dispatch({ type: ADD_MESSAGE_START });
+  console.log("message", message);
   return axios
     .post(`${baseUrl}/api/messages`, message, headers)
     .then(res => {
@@ -62,20 +64,41 @@ export const addMessage = message => dispatch => {
     })
     .catch(err => dispatch({ type: ADD_MESSAGE_FAILURE, payload: err }));
 };
-export const updateMessage = (postId, userId, x) => dispatch => {
+export const updateMessage = (postId, message) => dispatch => {
+  console.log("post id:", postId);
+  const token = localStorage.getItem("token");
+  const id = localStorage.getItem("id");
+
+  const headers = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${token}`,
+      id: `${id}`
+    }
+  };
   dispatch({ type: UPDATE_MESSAGE_START });
-  return axiosAuth()
-    .put(`${baseUrl}/api/messages/${postId}`, x)
+  return axios
+    .put(`${baseUrl}/api/messages/${postId}`, message, headers)
     .then(res => dispatch({ type: UPDATE_MESSAGE_SUCCESS, payload: res.data }))
-    .then(() => fetchMessages(userId)(dispatch))
+    .then(() => fetchMessages()(dispatch))
     .catch(err => dispatch({ type: UPDATE_MESSAGE_FAILURE, payload: err }));
 };
 
-export const deleteMessage = (id, userId) => dispatch => {
+export const deleteMessage = postId => dispatch => {
+  const token = localStorage.getItem("token");
+  const id = localStorage.getItem("id");
+
+  const headers = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${token}`,
+      id: `${id}`
+    }
+  };
   dispatch({ type: DELETE_MESSAGE_START });
-  return axiosAuth()
-    .delete(`${baseUrl}/api/messages/${id}`)
+  return axios
+    .delete(`${baseUrl}/api/messages/${postId}`, headers)
     .then(res => dispatch({ type: DELETE_MESSAGE_SUCCESS, payload: res.data }))
-    .then(() => fetchMessages(userId)(dispatch))
+    .then(() => fetchMessages()(dispatch))
     .catch(err => dispatch({ type: DELETE_MESSAGE_FAILURE, payload: err }));
 };

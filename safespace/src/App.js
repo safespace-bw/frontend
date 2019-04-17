@@ -12,11 +12,27 @@ import MessageList from "./components/MessageList";
 import { connect } from "react-redux";
 
 class App extends Component {
+  componentDidMount() {
+    this.setState({
+      ...this.state
+    });
+  }
+
+  logout = () => {
+    console.log("pow");
+    this.setState({
+      ...this.state,
+      token: null
+    });
+    localStorage.clear();
+    window.location.reload();
+  };
+
   render() {
     return (
       <Router>
         <div className="App">
-          <Navigation />
+          <Navigation loggedIn={this.props.loggedIn} />
 
           <Route exact path="/" component={Signup} />
           <Route path="/login" component={Login} />
@@ -34,7 +50,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    messages: state.messages
+    messages: state.messages,
+    loggedIn: state.login.loggedIn
   };
 };
 
