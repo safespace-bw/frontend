@@ -30,7 +30,7 @@ const Navigation = props => {
         </ul>
         <ul className="nav navbar-nav navbar-right">
           <li>
-            <NavLink to="/login" onClick={props.logOut}>
+            <NavLink onClick={props.logOut}>
               <i className="fas fa-sign-out-alt" /> Logout
             </NavLink>
           </li>
