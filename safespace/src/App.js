@@ -18,8 +18,8 @@ class App extends Component {
     });
   }
 
-  logout = () => {
-    console.log("pow");
+  logOut = () => {
+    console.log("logout");
     this.setState({
       ...this.state,
       token: null
@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Navigation loggedIn={this.props.loggedIn} />
+          <Navigation loggedIn={this.props.loggedIn} logOut={this.logOut} />
 
           <Route exact path="/" component={Signup} />
           <Route path="/login" component={Login} />

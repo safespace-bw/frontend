@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const MessageBox = styled.div`
 
-  background-image: url("https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,fl_lossy/g5/g5-c-irfhx05y-happy-boxes-self-storage-client/g5-cl-57mb0fims-happy-boxes-self-storage/uploads/background-billboard-green-v2.jpg")
+  background-image: url("../public/safespace.png")
   display: flex;
   width: 25rem;
   flex-direction: column;
@@ -22,6 +22,9 @@ const MessageBox = styled.div`
       text-align: center;
       font-size: 1.7rem;
       padding: 0;
+    }
+    .far {
+      color: rgba(135, 191, 255);
     }
   }
 `;

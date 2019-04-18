@@ -15,11 +15,13 @@
   border: 1px solid black;
 }
 .card-header {
+  background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   padding-top: 10px;
   color: white;
 }
 .card-body {
+  background-color: rgba(0, 0, 0, 0.5);
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 2rem;
