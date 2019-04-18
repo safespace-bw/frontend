@@ -7,24 +7,28 @@
 }
 
 .card {
-  height: 370px;
-  margin: 30px auto;
-  width: 400px;
-  border-radius: 2px;
+  height: 340px;
+  margin: 70px auto;
+  width: 30rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   border: 1px solid black;
 }
 .card-header {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(108, 99, 255);
   text-align: center;
   padding-top: 10px;
-  color: white;
+  color: black;
+
+  border-top: 1px solid black;
 }
 .card-body {
   background-color: rgba(0, 0, 0, 0.5);
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
   padding: 2rem;
   color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
 }
 
 .social_icon span {
@@ -73,7 +77,7 @@ input:focus {
 
 .login_btn {
   color: black;
-  background-color: #87bfff;
+  background-color: rgba(108, 99, 255);
   width: 100px;
 }
 
@@ -88,4 +92,14 @@ input:focus {
 
 .links a {
   margin-left: 4px;
+}
+
+.col-md-12 {
+  position: absolute;
+  bottom: 0px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
