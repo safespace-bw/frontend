@@ -1,28 +1,37 @@
 .message-box {
-  background-image: url("https://cdn.pixabay.com/photo/2016/07/30/19/33/smartphone-1557796_960_720.png");
-
-  background-position: 50% 50%;
-  background-size: 300px 300px;
-  background-repeat: no-repeat;
   display: flex;
   width: 25rem;
-  height: 300px;
   flex-direction: column;
-  padding: 1rem 0;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-  border-radius: 8px;
-  margin: 20px auto;
+  margin: 0px auto;
   color: black;
 }
 .top-box {
   display: flex;
   flex-direction: column;
 }
+.text-container {
+  display: flex;
+  flex-direction: row;
+}
 .text-box {
-  width: 100%;
-  text-align: center;
-  font-size: 1.7rem;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+.text-box p {
+  margin-top: 10px;
+  padding: 7px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.me-Img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 .far {
   color: rgba(135, 191, 255);

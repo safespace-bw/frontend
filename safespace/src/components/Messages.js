@@ -32,23 +32,28 @@ class Messages extends React.Component {
         <div className="top-box">
           <div className="text-box">
             {!this.state.editing ? (
-              <p>
-                {this.props.message.body}{" "}
-                <i
-                  className="far fa-edit"
-                  onClick={() => this.setState({ editing: true })}
-                />{" "}
-                <i
-                  className="far fa-trash-alt"
-                  onClick={e =>
-                    this.props.deleteMessage(e, this.props.message.id)
-                  }
-                />
-              </p>
+              <div className="text-container">
+                <div>
+                  <img className="me-Img" src="me.png" />
+                </div>{" "}
+                <p>
+                  {this.props.message.body}{" "}
+                  <i
+                    className="far fa-edit"
+                    onClick={() => this.setState({ editing: true })}
+                  />{" "}
+                  <i
+                    className="far fa-trash-alt"
+                    onClick={e =>
+                      this.props.deleteMessage(e, this.props.message.id)
+                    }
+                  />
+                </p>
+              </div>
             ) : (
               <div>
                 <input
-                  className="title-input"
+                  className="text-input"
                   type="text"
                   name="newText"
                   value={this.state.newText}
