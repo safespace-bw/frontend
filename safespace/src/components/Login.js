@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { login } from "../actions/loginAction";
+import { Link } from "react-router-dom";
 import "../css/login.css";
 
 class Login extends React.Component {
@@ -74,6 +75,11 @@ class Login extends React.Component {
                   />
                 </div>
               </form>
+              <div className="col-md-12">
+                <p>
+                  Not registered?<Link to="/signup"> Create an account</Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>

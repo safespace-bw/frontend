@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signup } from "../actions/signupAction";
+import { Link } from "react-router-dom";
 import "../css/signup.css";
 
 class Signup extends Component {
@@ -73,6 +74,11 @@ class Signup extends Component {
                   />
                 </div>
               </form>
+              <div className="col-md-12">
+                <p>
+                  Already registered?<Link to="/login"> Login Here</Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
