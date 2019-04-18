@@ -1,0 +1,29 @@
+.message-box {
+  background-image: url("https://cdn.pixabay.com/photo/2016/07/30/19/33/smartphone-1557796_960_720.png");
+
+  background-position: 50% 50%;
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 25rem;
+  height: 300px;
+  flex-direction: column;
+  padding: 1rem 0;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-radius: 8px;
+  margin: 20px auto;
+  color: black;
+}
+.top-box {
+  display: flex;
+  flex-direction: column;
+}
+.text-box {
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.far {
+  color: rgba(135, 191, 255);
+}

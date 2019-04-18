@@ -9,12 +9,12 @@ const Navigation = props => {
       <ul className="nav navbar-nav navbar-right">
         <li>
           <NavLink to="/signup">
-            <i className="fas fa-user-alt" /> Sign Up
+            <i className="fas fa-user-alt fa-lg" /> Sign Up
           </NavLink>
         </li>
         <li>
           <NavLink to="/login">
-            <i className="fas fa-sign-in-alt" /> Login
+            <i className="fas fa-sign-in-alt fa-lg" /> Login
           </NavLink>
         </li>
       </ul>
@@ -45,9 +45,9 @@ const Navigation = props => {
         <div className="navbar-header">
           <a className="navbar-brand" href="https://safespace.netlify.com/">
             <img
-              src="https://static.thenounproject.com/png/358468-200.png"
-              width="70px"
-              height="50px"
+              src="https://assets.dryicons.com/uploads/icon/svg/6593/633d41cf-0dcd-4316-8beb-ffc1b3adc070.svg"
+              width="60px"
+              height="60px"
               alt=""
             />{" "}
             Safe Space{" "}

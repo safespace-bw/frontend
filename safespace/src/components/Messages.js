@@ -1,33 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
-const MessageBox = styled.div`
-
-  background-image: url("../public/safespace.png")
-  display: flex;
-  width: 25rem;
-  flex-direction: column;
-  padding: 1rem 0;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-  border-radius: 8px;
-  margin: 20px auto;
-  color: white;
-  .top-box {
-    display: flex;
-    flex-direction: column;
-    .text-box {
-      width: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      text-align: center;
-      font-size: 1.7rem;
-      padding: 0;
-    }
-    .far {
-      color: rgba(135, 191, 255);
-    }
-  }
-`;
+import "../css/messages.css";
 
 class Messages extends React.Component {
   constructor(props) {
@@ -56,7 +28,7 @@ class Messages extends React.Component {
 
   render() {
     return (
-      <MessageBox>
+      <div className="message-box">
         <div className="top-box">
           <div className="text-box">
             {!this.state.editing ? (
@@ -87,7 +59,7 @@ class Messages extends React.Component {
             )}
           </div>
         </div>
-      </MessageBox>
+      </div>
     );
   }
 }

@@ -6,6 +6,7 @@
 }
 .navbar-brand {
   color: black;
+  font-size: 2rem;
 }
 .navbar-nav {
   display: flex;
