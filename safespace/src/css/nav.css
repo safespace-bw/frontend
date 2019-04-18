@@ -6,12 +6,17 @@
 }
 .navbar-brand {
   color: black;
+  font-size: 2rem;
 }
 .navbar-nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
+.navbar-inverse {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-inverse .navbar-nav > li > a {

@@ -5,6 +5,7 @@ import {
 } from "../actions/signupAction";
 
 const initialSignupState = {
+  registered: false,
   isLoading: false,
   displayText: "Sign Up",
   error: "",
@@ -36,7 +37,7 @@ export const signupReducer = (state = initialSignupState, action) => {
       return {
         ...state,
         registered: true,
-        displayText: "Welcome!"
+        displayText: "Signed Up!"
       };
     case SIGNUP_FAILURE:
       return {

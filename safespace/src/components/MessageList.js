@@ -9,6 +9,8 @@ import {
 } from "../actions/messageListAction";
 import { connect } from "react-redux";
 
+import "../css/messageList.css";
+
 class MessageList extends React.Component {
   state = {
     messages: []
@@ -40,9 +42,9 @@ class MessageList extends React.Component {
   render() {
     console.log("this.props.messages:", this.props.messages);
     return (
-      <>
+      <div className="messageList-container">
         <MessageForm addMessage={this.addMessage} />
-        <div>
+        <div className="messages-container">
           {this.props.messages.map((message, id) => {
             return (
               <Messages
@@ -54,7 +56,7 @@ class MessageList extends React.Component {
             );
           })}
         </div>
-      </>
+      </div>
     );
   }
 }

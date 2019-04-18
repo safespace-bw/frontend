@@ -10,16 +10,22 @@ class Signup extends Component {
   };
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value
+    });
   };
 
   signup = e => {
     e.preventDefault();
     console.log(this.state);
-    this.props.signup(this.state);
+    this.props.signup(this.state).then(() => {
+      this.props.history.push("/login");
+    });
   };
 
   render() {
+    console.log(this.props);
     return (
       <div className="container">
         <div className="d-flex justify-content-center h-100">
@@ -79,7 +85,8 @@ const mapStateToProps = state => {
   return {
     isLoading: state.signup.isLoading,
     displayText: state.signup.displayText,
-    error: state.signup.error
+    error: state.signup.error,
+    registered: state.signup.registered
   };
 };
 

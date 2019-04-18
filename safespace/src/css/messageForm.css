@@ -8,12 +8,15 @@ label {
   text-align: center;
   font-size: 2rem;
 }
+.messageForm {
+  width: 300px;
+}
 
 .messageForm-group {
-  margin: 75px auto 0 auto;
-  width: 500px;
+  margin: 150px auto 0 auto;
+  width: 300px;
 }
 .btn-block {
   color: black;
-  background-color: #87bfff;
+  background-color: rgba(135, 191, 255, 0.7);
 }
