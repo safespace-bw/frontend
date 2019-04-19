@@ -25,7 +25,7 @@ class App extends Component {
       token: null
     });
     localStorage.clear();
-    window.location.assign("/login");
+    window.location.assign("/");
   };
 
   render() {
