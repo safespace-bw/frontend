@@ -34,7 +34,7 @@ class MessageForm extends React.Component {
             <textarea
               onChange={this.input}
               value={this.state.text}
-              placeholder="think happy thoughts!!!"
+              placeholder="send a message to yourself!"
               className="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
