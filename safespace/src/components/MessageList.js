@@ -8,7 +8,7 @@ import {
   deleteMessage
 } from "../actions/messageListAction";
 import { connect } from "react-redux";
-
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import "../css/messageList.css";
 
 class MessageList extends React.Component {
@@ -41,20 +41,27 @@ class MessageList extends React.Component {
 
   render() {
     console.log("this.props.messages:", this.props.messages);
+
+    const messageList = this.props.messages.map((message, id) => (
+      <Messages
+        message={message}
+        updateMessage={this.updateMessage}
+        deleteMessage={this.deleteMessage}
+        key={id}
+      />
+    ));
+
     return (
       <div className="messageList-container">
         <MessageForm addMessage={this.addMessage} />
         <div className="messages-container">
-          {this.props.messages.map((message, id) => {
-            return (
-              <Messages
-                message={message}
-                updateMessage={this.updateMessage}
-                deleteMessage={this.deleteMessage}
-                key={id}
-              />
-            );
-          })}
+          <ReactCSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}
+          >
+            {messageList}
+          </ReactCSSTransitionGroup>
         </div>
       </div>
     );

@@ -34,7 +34,7 @@ class Messages extends React.Component {
             {!this.state.editing ? (
               <div className="text-container">
                 <div>
-                  <img className="me-Img" src="me.png" />
+                  <img className="me-Img" src="smiley.png" />
                 </div>{" "}
                 <p>
                   {this.props.message.body}{" "}
