@@ -28,61 +28,63 @@ class Signup extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="container">
-        <div className="d-flex justify-content-center h-100">
-          <div className="card">
-            <div className="card-header">
-              <h2>{this.props.displayText}</h2>
-            </div>
-            <div className="card-body">
-              <form onSubmit={this.signup}>
-                <div className="input-group form-group">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text">
-                      <i className="fas fa-user" />
-                    </span>
+      <html className="signup-bg">
+        <div className="container">
+          <div className="d-flex justify-content-center h-100">
+            <div className="card">
+              <div className="card-header">
+                <h2>{this.props.displayText}</h2>
+              </div>
+              <div className="card-body">
+                <form onSubmit={this.signup}>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                        <i className="fas fa-user" />
+                      </span>
+                    </div>
+                    <input
+                      className="form-control"
+                      onChange={this.handleChange}
+                      placeholder="Create Username"
+                      value={this.state.username}
+                      name="username"
+                      type="text"
+                    />
                   </div>
-                  <input
-                    className="form-control"
-                    onChange={this.handleChange}
-                    placeholder="Create Username"
-                    value={this.state.username}
-                    name="username"
-                    type="text"
-                  />
-                </div>
-                <div className="input-group form-group">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text">
-                      <i className="fas fa-key" />
-                    </span>
+                  <div className="input-group form-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                        <i className="fas fa-key" />
+                      </span>
+                    </div>
+                    <input
+                      className="form-control"
+                      onChange={this.handleChange}
+                      placeholder="Create Password"
+                      value={this.state.password}
+                      name="password"
+                      type="password"
+                    />
                   </div>
-                  <input
-                    className="form-control"
-                    onChange={this.handleChange}
-                    placeholder="Create Password"
-                    value={this.state.password}
-                    name="password"
-                    type="password"
-                  />
+                  <div className="form-group">
+                    <input
+                      type="submit"
+                      value="Sign Up"
+                      className="btn float-right login_btn"
+                    />
+                  </div>
+                </form>
+                <div className="col-md-12">
+                  <p>
+                    Already registered?<Link to="/login"> Login Here</Link>
+                  </p>
                 </div>
-                <div className="form-group">
-                  <input
-                    type="submit"
-                    value="Sign Up"
-                    className="btn float-right login_btn"
-                  />
-                </div>
-              </form>
-              <div className="col-md-12">
-                <p>
-                  Already registered?<Link to="/login"> Login Here</Link>
-                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </html>
     );
   }
 }

@@ -45,7 +45,7 @@ const Navigation = props => {
     <nav className="navbar navbar-inverse">
       <div className="container-fluid">
         <div className="navbar-header">
-          <a className="navbar-brand">
+          <div className="navbar-brand">
             <a href="https://safespace.netlify.com/">
               <img
                 src="https://assets.dryicons.com/uploads/icon/svg/6593/633d41cf-0dcd-4316-8beb-ffc1b3adc070.svg"
@@ -56,7 +56,7 @@ const Navigation = props => {
             </a>
             <h2 className="navbar-text">Safe Space </h2>
             <i className="far fa-registered fa-xs" />
-          </a>
+          </div>
         </div>
         {logChange}
       </div>

@@ -1,4 +1,15 @@
-/* message form styles */
+/* Message Form styles */
+
+@media (max-width: 800px) {
+  .messageForm-group {
+    margin-top: 250px;
+  }
+}
+
+.messageForm {
+  margin-top: 225px;
+}
+
 label {
   width: 100%;
   margin: 0 auto;
@@ -8,14 +19,7 @@ label {
   text-align: center;
   font-size: 2rem;
 }
-.messageForm {
-  width: 300px;
-}
 
-.messageForm-group {
-  margin: 150px auto 0 auto;
-  width: 30rem;
-}
 .btn-block {
   color: black;
   background-color: rgba(135, 191, 255, 0.7);

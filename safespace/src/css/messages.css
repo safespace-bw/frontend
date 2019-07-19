@@ -1,3 +1,5 @@
+/* Messages styles */
+
 .message-box {
   display: flex;
   width: 25rem;
@@ -5,14 +7,17 @@
   margin: 0px auto;
   color: black;
 }
+
 .top-box {
   display: flex;
   flex-direction: column;
 }
+
 .text-container {
   display: flex;
   flex-direction: row;
 }
+
 .text-box {
   display: flex;
   flex-direction: row;
@@ -21,18 +26,21 @@
   font-size: 0.9rem;
   margin: 0 auto;
 }
+
 .text-box p {
   margin-top: 10px;
   padding: 7px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
+
 .me-Img {
   height: 30px;
   width: 30px;
   border-radius: 50%;
   margin-right: 5px;
 }
+
 .far {
   color: rgba(135, 191, 255);
 }

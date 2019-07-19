@@ -1,9 +1,7 @@
-/* signup styles*/
+/* Signup page styles*/
 
 .container {
-  height: 100%;
-  align-content: center;
-  margin: 0 auto;
+  height: 100vh;
 }
 
 .card {
@@ -14,14 +12,15 @@
   border-bottom-right-radius: 15px;
   border: 1px solid black;
 }
+
 .card-header {
   background-color: rgb(108, 99, 255);
   text-align: center;
   padding-top: 10px;
   color: black;
-
   border-top: 1px solid black;
 }
+
 .card-body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;

@@ -1,0 +1,5 @@
+
+[build]
+ base  = "safespace/"
+ publish = "safespace/build"
+ command = "yarn build"

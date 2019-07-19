@@ -52,18 +52,22 @@ class MessageList extends React.Component {
     ));
 
     return (
-      <div className="messageList-container">
-        <MessageForm addMessage={this.addMessage} />
-        <div className="messages-container">
-          <ReactCSSTransitionGroup
-            transitionName="fade"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}
-          >
-            {messageList}
-          </ReactCSSTransitionGroup>
+      <html className="home-bg">
+        
+          <div className="messageList-container">
+            <MessageForm addMessage={this.addMessage} />
+            <div className="messages-container">
+              <ReactCSSTransitionGroup
+                transitionName="fade"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}
+              >
+                {messageList}
+              </ReactCSSTransitionGroup>
+            </div>
+          
         </div>
-      </div>
+      </html>
     );
   }
 }

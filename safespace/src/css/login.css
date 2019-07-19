@@ -1,9 +1,7 @@
-/*login styles*/
+/* Login styles*/
 
 .container {
-  height: 100%;
-  align-content: center;
-  margin: 0 auto;
+  height: 100vh;
 }
 
 .card {
@@ -13,12 +11,14 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
+
 .card-header {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   padding-top: 10px;
   color: white;
 }
+
 .card-body {
   background-color: rgba(0, 0, 0, 0.5);
   -ms-flex: 1 1 auto;
