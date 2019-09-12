@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://safespace-bw3.herokuapp.com";
+const baseUrl = "http://localhost:5000";
 
 export const LOGIN_START = "LOGIN_START";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
