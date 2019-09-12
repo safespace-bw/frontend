@@ -57,9 +57,9 @@ class MessageForm extends React.Component {
 
   render() {
     return (
-      <>
-        <form onSubmit={this.addMessage}>
-          <div className="messageForm">
+      <div className="messageForm">
+        <div className="messageForm-container">
+          <form onSubmit={this.addMessage}>
             <div className="messageForm-group">
               <label htmlFor="exampleFormControlTextarea1">
                 Create a Positive Message
@@ -95,9 +95,9 @@ class MessageForm extends React.Component {
                 />
               </div>
             </div>
-          </div>
-        </form>
-      </>
+          </form>
+        </div>
+      </div>
     );
   }
 }

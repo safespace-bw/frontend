@@ -10,6 +10,7 @@ import {
 import { connect } from "react-redux";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import "../css/messageList.css";
+import { Container } from "react-bootstrap";
 
 class MessageList extends React.Component {
   state = {
@@ -52,9 +53,9 @@ class MessageList extends React.Component {
     ));
 
     return (
-      <html className="home-bg">
-        
-          <div className="messageList-container">
+      <div className="home-bg">
+        <div className="messageList-container">
+          <Container>
             <MessageForm addMessage={this.addMessage} />
             <div className="messages-container">
               <ReactCSSTransitionGroup
@@ -65,9 +66,9 @@ class MessageList extends React.Component {
                 {messageList}
               </ReactCSSTransitionGroup>
             </div>
-          
+          </Container>
         </div>
-      </html>
+      </div>
     );
   }
 }

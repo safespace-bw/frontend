@@ -49,8 +49,8 @@ const Navigation = props => {
             <a href="https://safespace.netlify.com/">
               <img
                 src="https://assets.dryicons.com/uploads/icon/svg/6593/633d41cf-0dcd-4316-8beb-ffc1b3adc070.svg"
-                width="60px"
-                height="60px"
+                width="40px"
+                height="40px"
                 alt="logo"
               />
             </a>
