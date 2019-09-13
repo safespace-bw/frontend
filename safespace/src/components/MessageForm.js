@@ -65,7 +65,10 @@ class MessageForm extends React.Component {
     return (
       <Card>
         <div className="top-div"></div>
-        <div className="card-header">Header</div>
+        <h1 style={{ color: "white", textAlign: "center" }}>Messenger</h1>
+        <h6 className="card-title" style={{ color: "black" }}>
+          Send a positive text!
+        </h6>
         <img src={phoneText} className="phonetext-img"></img>
         <div className="messageForm">
           <div className="messageForm-container">
@@ -75,28 +78,33 @@ class MessageForm extends React.Component {
                   defaultCountry={"us"}
                   value={this.state.to}
                   onChange={this.handleOnChange}
+                  inputStyle={{ borderRadius: "15px" }}
                   inputExtraProps={{
                     name: "to",
                     required: true,
                     autoFocus: true
                   }}
                   className="form-control"
+                  id="phoneinput"
+                  placeholder="Enter phone number"
                 />
 
                 <textarea
                   name="body"
                   onChange={this.input}
                   value={this.state.message.body}
-                  // placeholder="send a message to yourself!"
+                  placeholder="Your Message *"
                   className="form-control"
                   id="exampleFormControlTextarea1"
                   rows="3"
+                  id="textinput"
                 />
 
                 <div className="buttonForm-group">
                   <Button
                     type="submit"
                     // size="large"
+
                     variant="contained"
                     style={{
                       // color: "white",

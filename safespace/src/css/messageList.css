@@ -61,10 +61,18 @@
   /* background-color: white; */
   width: 40%;
 }
-
 .phone-container {
-  width: 40%;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
+}
+.react-tel-input .selected-flag {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.react-tel-input .flag-dropdown {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .messages-container {
