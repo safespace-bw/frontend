@@ -28,10 +28,11 @@
 }
 
 .text-box p {
-  margin-top: 10px;
-  padding: 7px;
+  margin-right: 10px;
+  padding: 7px 15px 7px 20px;
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 30px;
+  font-size: 12px;
 }
 
 .me-Img {
@@ -43,4 +44,10 @@
 
 .far {
   color: rgba(135, 191, 255);
+}
+.far:hover {
+  cursor: pointer;
+}
+.fa-edit {
+  margin-left: 5px;
 }
