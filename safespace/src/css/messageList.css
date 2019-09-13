@@ -95,8 +95,13 @@
   border-bottom-right-radius: 100px;
 }
 .sent-messages {
+  padding-bottom: 50px;
+  /* position: relative; */
   margin-top: 10px;
   margin-left: 10px;
+  /* margin-bottom: 50px; */
+  max-height: 300px;
+  overflow: hidden;
 }
 
 .fade-enter {
