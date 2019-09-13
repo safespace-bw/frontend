@@ -30,8 +30,17 @@ class App extends Component {
         <div className="App">
           <Navigation loggedIn={this.props.loggedIn} logOut={this.logOut} />
 
-          <Route exact path="/" component={Signup} />
-          <Route path="/login" component={Login} />
+          <Route
+            exact
+            path="/"
+            loggedIn={this.props.loggedIn}
+            component={Login}
+          />
+          <Route
+            path="/login"
+            loggedIn={this.props.loggedIn}
+            component={Login}
+          />
           <Route path="/signup" component={Signup} />
           <PrivateRoute
             exact

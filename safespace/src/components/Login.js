@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { login } from "../actions/loginAction";
 import { Link } from "react-router-dom";
+
 import "../css/login.css";
 
 class Login extends React.Component {
@@ -22,14 +23,18 @@ class Login extends React.Component {
   };
 
   login = e => {
+    console.log("this props", this.props);
+    console.log("this state", this.state);
     e.preventDefault();
     this.props.login(this.state.credentials).then(() => {
-      this.props.history.push("/messagelist");
+      this.props.loggedIn === true
+        ? this.props.history.push("/messagelist")
+        : this.props.history.push("/login");
     });
   };
   render() {
     return (
-      <html className="signup-bg">
+      <div className="signup-bg">
         <div className="signup-container">
           <div className="d-flex justify-content-center h-100">
             <div className="signup-card">
@@ -85,14 +90,14 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
-      </html>
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    loggedIn: state.loggedIn,
+    loggedIn: state.login.loggedIn,
     error: state.error,
     displayText: state.login.displayText,
     messages: state.messages

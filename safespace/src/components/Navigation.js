@@ -26,7 +26,7 @@ const Navigation = props => {
           </li> */}
           <li>
             <NavLink to="/messagelist">
-              My Messages <i class="fas fa-sms fa-lg" />
+              My Messages <i className="fas fa-sms fa-lg" />
             </NavLink>
           </li>
         </ul>
@@ -40,24 +40,26 @@ const Navigation = props => {
       </>
     );
 
-  console.log("loggedIn:", props.loggedIn);
   return (
     <nav className="navbar navbar-inverse">
       <div className="container-fluid">
-        <div className="navbar-header">
-          <div className="navbar-brand">
-            <a href="https://safespace.netlify.com/">
+        <a className="nav-logo" href="https://safespace.netlify.com/">
+          <div className="navbar-header">
+            <div className="navbar-brand">
               <img
                 src="https://assets.dryicons.com/uploads/icon/svg/6593/633d41cf-0dcd-4316-8beb-ffc1b3adc070.svg"
-                width="40px"
+                width="30px"
                 height="40px"
                 alt="logo"
               />
-            </a>
-            <h2 className="navbar-text">Safe Space </h2>
-            <i className="far fa-registered fa-xs" />
+
+              <h2 className="navbar-text">Safe Space </h2>
+              <div className="navbar-register" style={{ fontSize: "10px" }}>
+                <i className="far fa-registered fa-xs" />
+              </div>
+            </div>
           </div>
-        </div>
+        </a>
         {logChange}
       </div>
     </nav>

@@ -7,9 +7,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import { Card } from "react-bootstrap";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
-import Fab from "@material-ui/core/Fab";
 import phoneText from "../images/phonetext1.png";
 
 class MessageForm extends React.Component {
@@ -69,7 +67,7 @@ class MessageForm extends React.Component {
         <h6 className="card-title" style={{ color: "black" }}>
           Send a positive text!
         </h6>
-        <img src={phoneText} className="phonetext-img"></img>
+        <img src={phoneText} className="phonetext-img" alt="phonetext"></img>
         <div className="messageForm">
           <div className="messageForm-container">
             <form onSubmit={this.addMessage}>
@@ -95,7 +93,6 @@ class MessageForm extends React.Component {
                   value={this.state.message.body}
                   placeholder="Your Message *"
                   className="form-control"
-                  id="exampleFormControlTextarea1"
                   rows="3"
                   id="textinput"
                 />

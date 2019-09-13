@@ -19,16 +19,17 @@ class Signup extends Component {
 
   signup = e => {
     e.preventDefault();
-    console.log(this.state);
     this.props.signup(this.state).then(() => {
-      this.props.history.push("/login");
+      this.props.registered === true
+        ? this.props.history.push("/messagelist")
+        : this.props.history.push("/signup");
     });
   };
 
   render() {
-    console.log(this.props);
+    console.log("props: ", this.props);
     return (
-      <html className="signup-bg">
+      <div className="signup-bg">
         <div className="signup-container">
           <div className="d-flex justify-content-center h-100">
             <div className="signup-card">
@@ -84,7 +85,7 @@ class Signup extends Component {
             </div>
           </div>
         </div>
-      </html>
+      </div>
     );
   }
 }
