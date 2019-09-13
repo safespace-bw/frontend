@@ -6,7 +6,10 @@ import "react-phone-input-2/dist/style.css";
 import { connect } from "react-redux";
 import axios from "axios";
 import { Card } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import SendIcon from "@material-ui/icons/Send";
+import Fab from "@material-ui/core/Fab";
 import phoneText from "../images/phonetext1.png";
 
 class MessageForm extends React.Component {
@@ -61,6 +64,8 @@ class MessageForm extends React.Component {
   render() {
     return (
       <Card>
+        <div className="top-div"></div>
+        <div className="card-header">Header</div>
         <img src={phoneText} className="phonetext-img"></img>
         <div className="messageForm">
           <div className="messageForm-container">
@@ -91,9 +96,19 @@ class MessageForm extends React.Component {
                 <div className="buttonForm-group">
                   <Button
                     type="submit"
-                    value="Send"
-                    className="btn-lg btn-block"
-                  />
+                    // size="large"
+                    variant="contained"
+                    style={{
+                      // color: "white",
+                      backgroundColor: "rgb(129,210,199)",
+                      width: "200px",
+                      height: "40px",
+                      borderRadius: "20px"
+                    }}
+                  >
+                    Send Message
+                    <SendIcon style={{ marginLeft: "5px" }}></SendIcon>
+                  </Button>
                 </div>
               </div>
             </form>
