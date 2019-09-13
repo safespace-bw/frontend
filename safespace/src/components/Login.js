@@ -29,16 +29,14 @@ class Login extends React.Component {
   };
   render() {
     return (
-      
-      <html className='signup-bg'>
-         
-        <div className="container">
+      <html className="signup-bg">
+        <div className="signup-container">
           <div className="d-flex justify-content-center h-100">
-            <div className="card">
-              <div className="card-header">
+            <div className="signup-card">
+              <div className="signup-card-header">
                 <h2>{this.props.displayText}</h2>
               </div>
-              <div className="card-body">
+              <div className="signup-card-body">
                 <form onSubmit={this.login}>
                   <div className="input-group form-group">
                     <div className="input-group-prepend">
@@ -87,7 +85,6 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
-        
       </html>
     );
   }

@@ -1,19 +1,21 @@
 /* Signup page styles*/
 
-.container {
+.signup-container {
   height: 100vh;
 }
 
-.card {
+.signup-card {
   height: 340px;
   margin: 70px auto;
   width: 30rem;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
-.card-header {
+.signup-card-header {
   background-color: rgb(108, 99, 255);
   text-align: center;
   padding-top: 10px;
@@ -21,7 +23,7 @@
   border-top: 1px solid black;
 }
 
-.card-body {
+.signup-card-body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   color: white;
@@ -91,12 +93,6 @@ input:focus {
 
 .links a {
   margin-left: 4px;
-}
-
-.col-md-12 {
-  position: absolute;
-  bottom: 0px;
-  text-decoration: none;
 }
 
 a:hover {

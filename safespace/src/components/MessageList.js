@@ -57,14 +57,16 @@ class MessageList extends React.Component {
         <div className="messageList-container">
           <Container>
             <MessageForm addMessage={this.addMessage} />
-            <div className="messages-container">
-              <ReactCSSTransitionGroup
-                transitionName="fade"
-                transitionEnterTimeout={500}
-                transitionLeaveTimeout={300}
-              >
-                {messageList}
-              </ReactCSSTransitionGroup>
+            <div className="phone-container">
+              <div className="messages-container">
+                <ReactCSSTransitionGroup
+                  transitionName="fade"
+                  transitionEnterTimeout={500}
+                  transitionLeaveTimeout={300}
+                >
+                  {messageList}
+                </ReactCSSTransitionGroup>
+              </div>
             </div>
           </Container>
         </div>

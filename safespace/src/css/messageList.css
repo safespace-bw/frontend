@@ -30,13 +30,15 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   /* margin-top: 30px; */
   background: rgba(0, 0, 0, 0.4);
   height: 80%;
-  margin-top: 50px;
+  padding: 0;
+  margin-top: 100px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 20px;
+  height: 500px;
 }
 
 .messageList-container {
@@ -46,15 +48,33 @@
   justify-content: space-evenly;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  background-color: rgb(108, 98, 252);
+  /* background-color: white; */
+  width: 40%;
+}
+
+.phone-container {
+  width: 40%;
+  margin: 0 auto;
+}
+
 .messages-container {
   padding-top: 100px;
-  padding-bottom: 100px;
+  height: 100%;
   background-image: url("../images/smartphone.png");
   /* background-size: 100% 650px; */
-
   background-size: contain;
-  /* background-position: absolute; */
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .fade-enter {
