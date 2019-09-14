@@ -1,6 +1,6 @@
 *My front-end work is deployed @ https://safespace-frontend.netlify.com/*
 
-[Imgur](https://i.imgur.com/8eCj0BK.png)
+![Imgur](https://i.imgur.com/8eCj0BK.png)
 
 # Safespace 
 
