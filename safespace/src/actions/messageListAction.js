@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://safespace1.herokuapp.com/";
+const baseUrl = "https://safespace1.herokuapp.com";
 
 export const FETCH_MESSAGES_START = "FETCH_MESSAGES_START";
 export const FETCH_MESSAGES_SUCCESS = "FETCH_MESSAGES_SUCCESS";

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://safespace1.herokuapp.com/";
+const baseUrl = "https://safespace1.herokuapp.com";
 
 export const SIGNUP_START = "SIGNUP_START";
 export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
