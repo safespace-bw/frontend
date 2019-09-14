@@ -59,15 +59,17 @@ class MessageList extends React.Component {
             <MessageForm addMessage={this.addMessage} />
             <div className="phone-container">
               <div className="messages-container">
-                <div className="messages-outbox">Messages Sent</div>
+                <div className="text-container">
+                  <div className="messages-outbox">Messages Sent</div>
 
-                <ReactCSSTransitionGroup
-                  transitionName="fade"
-                  transitionEnterTimeout={500}
-                  transitionLeaveTimeout={300}
-                >
-                  <div className="sent-messages">{messageList}</div>
-                </ReactCSSTransitionGroup>
+                  <ReactCSSTransitionGroup
+                    transitionName="fade"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}
+                  >
+                    <div className="sent-messages">{messageList}</div>
+                  </ReactCSSTransitionGroup>
+                </div>
               </div>
             </div>
           </Container>
