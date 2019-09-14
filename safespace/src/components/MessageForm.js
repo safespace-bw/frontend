@@ -48,7 +48,7 @@ class MessageForm extends React.Component {
     });
     axios({
       method: "POST",
-      url: "http://localhost:5000/api/twilio/msg",
+      url: "https://safespace1.herokuapp.com/api/twilio/msg",
       // headers: {
       //   "Content-Type": "application/json"
       // },
