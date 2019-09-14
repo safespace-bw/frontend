@@ -83,25 +83,35 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  justify-content: center;
 }
 
 .messages-outbox {
-  margin: 0 auto auto 240.4px;
+  position: absolute;
+  /* margin: 0 auto auto 240.4px; */
   text-align: center;
-  background: rgba(249, 200, 130, 0.5);
-  width: 204.9px;
+  background: rgba(249, 200, 130);
+  width: 204px;
+  height: 30px;
   padding: 5px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 100px;
+  z-index: 2;
+  margin-left: -1px;
+  /* padding-right: 2px; */
+  /* left: 5px; */
 }
 .sent-messages {
-  padding-bottom: 50px;
-  /* position: relative; */
-  margin-top: 10px;
-  margin-left: 10px;
-  /* margin-bottom: 50px; */
-  max-height: 300px;
-  overflow: hidden;
+  max-height: 360px;
+  overflow: scroll;
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  padding: 40px 0 0 5px;
 }
 
 .fade-enter {

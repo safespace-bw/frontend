@@ -2,15 +2,17 @@
 
 .message-box {
   display: flex;
-  width: 25rem;
+
   flex-direction: column;
   margin: 0px auto;
   color: black;
+  position: relative;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .top-box {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 .text-container {
@@ -21,7 +23,7 @@
 .text-box {
   display: flex;
   flex-direction: row;
-  width: 50%;
+
   text-align: left;
   font-size: 0.9rem;
   margin: 0 auto;
