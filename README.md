@@ -1,6 +1,8 @@
-*My front-end work is deployed @ https://safespace-frontend.netlify.com/*
-
 ![Imgur](https://i.imgur.com/8eCj0BK.png)
+
+Deployed @ https://safespace-frontend.netlify.com/ 
+
+* This project is for the front-end only, no landing page was created *
 
 # Safespace 
 
