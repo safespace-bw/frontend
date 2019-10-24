@@ -26,7 +26,7 @@ Don’t fight mental health alone. Use technology to help you fight it.
   Overall, this project was a good lesson in creating a React app from scratch. I fleshed out this app with functional and class components as well as array methods to dynamically render the elements. I also incorporated my newly acquired knowledge of react-router when I made this project and learned more about how CRUD operations drive an application.
 
 
-#### This project was completed during the month 2 unit: Web Application Development. 
+#### This project was completed during my Lambda School month 2 unit: Web Application Development. 
 The *Web Application Development* unit explored the following topics:
 
 - Functional Components 1 - 2
