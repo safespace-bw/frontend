@@ -2,7 +2,7 @@
 
 Deployed @ https://safespace-frontend.netlify.com/ 
 
-* This project is for the front-end only, no landing page was created *
+* This project is for the front-end only, I did not create a landing page *
 
 # Safespace 
 
