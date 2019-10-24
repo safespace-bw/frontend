@@ -6,12 +6,6 @@
 
 Don’t fight mental health alone. Use technology to help you fight it.
 
-## Frontend
-
-  This was my first group project at Lambda School as the Front End Developer and second group project overall. The MVP of this project was to build out a web application that consumes a CRUD API. I pair programmed with the UI Developers and Back End Developers on my team to ensure that all of my React components were wired up in proper fashion. The stretch goal of this app was to connect to the Twilio API in order to send out positive text reminders throughout the day. 
-  
-  Overall, this project was a good lesson in creating a React app from scratch. I fleshed out this app with functional and class components as well as array methods to dynamically render the elements. I also incorporated my newly acquired knowledge of react-router when I made this project and learned more about how CRUD operations drive an application.
-
 ## Tech Stack
 
 ```
@@ -19,9 +13,16 @@ Don’t fight mental health alone. Use technology to help you fight it.
 2. Redux
 3. React-Router
 4. Axios
-5. Twilio
+5. Twilio (currently works to send messages out to authorized twilio phone numbers on my trial account, I would have to pay to send the message to any number)
 
 ```
+
+## Frontend
+
+  This was my first group project at Lambda School as the Front End Developer and second group project overall. The MVP of this project was to build out a web application that consumes a CRUD API. I pair programmed with the UI Developers and Back End Developers on my team to ensure that all of my React components were wired up in proper fashion. The stretch goal of this app was to connect to the Twilio API in order to send out positive text reminders throughout the day. 
+  
+  Overall, this project was a good lesson in creating a React app from scratch. I fleshed out this app with functional and class components as well as array methods to dynamically render the elements. I also incorporated my newly acquired knowledge of react-router when I made this project and learned more about how CRUD operations drive an application.
+
 
 #### This project was completed during the month 2 unit: Web Application Development. 
 The *Web Application Development* unit explored the following topics:
