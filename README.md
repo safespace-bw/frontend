@@ -15,7 +15,7 @@ Don’t fight mental health alone. Use technology to help you fight it.
 2. Redux
 3. React-Router
 4. Axios
-5. Twilio (currently works to send messages out to authorized twilio phone numbers on my trial account, I would have to pay to send the message to any number)
+5. Twilio (currently works to send messages out to authorized twilio phone numbers on my trial account, I would have to pay for someone to send a message to any number)
 6. Bootstrap
 7. Material UI
 
