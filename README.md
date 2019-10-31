@@ -1,8 +1,13 @@
 ![Imgur](https://i.ibb.co/MDSDmtb/Screen-Shot-2019-10-30-at-11-18-43-PM.png)
 
-Deployed @ https://safespace-frontend.netlify.com/ 
 
-* This project is for the front-end only, I did not create a landing page *
+
+* this is the Front-End portion of the application *
+Deploy: https://safespace-frontend.netlify.com/ 
+
+* landing-page:
+  Deploy: https://safespace-landing.netlify.com/
+  Code: https://github.com/AJLambda/Safespace-landing *
 
 # Safespace 
 
@@ -76,5 +81,5 @@ Liz Baker: https://github.com/LizBaker
 
 ### User Interface
 
-Sydney Crumley: https://github.com/srsimps19
+Austin James: https://github.com/AJLambda
 
