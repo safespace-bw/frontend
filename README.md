@@ -1,4 +1,4 @@
-![Imgur](https://i.imgur.com/8eCj0BK.png)
+![Imgur](https://i.ibb.co/MDSDmtb/Screen-Shot-2019-10-30-at-11-18-43-PM.png)
 
 Deployed @ https://safespace-frontend.netlify.com/ 
 
