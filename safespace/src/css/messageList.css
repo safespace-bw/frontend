@@ -42,7 +42,7 @@
 }
 
 .messageList-container {
-  height: 100vh;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

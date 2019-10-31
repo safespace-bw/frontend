@@ -1,0 +1,172 @@
+.footer {
+  height: 450px;
+  width: 100%;
+  background-image: url("../images/wave4.png");
+  background-size: 100% 100%;
+  color: white;
+
+  @media (max-width: 425px) {
+    height: 300px;
+    background-image: none;
+    background-color: #f8f9fa;
+    color: black;
+  }
+
+  .contact {
+    padding-top: 200px;
+
+    @media (max-width: "425px") {
+      padding: 20px;
+    }
+  }
+
+  .footer-container {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin-left: 12%;
+    margin-right: 12%;
+
+    h6 {
+      font-size: 15px;
+    }
+
+    p,
+    a {
+      font-size: 14px;
+    }
+  }
+  .copyright-text {
+    // margin: 10px 12% 0 12%;
+    // text-align: left;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    font-family: "CircularStd", sans-serif;
+
+    .terms {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .contact {
+    align-content: center;
+
+    h6 {
+      margin: 15px;
+      font-family: "Bungee", sans-serif;
+      text-align: center;
+    }
+
+    .contact-icons {
+      margin: 10px auto 0 auto;
+      width: 200px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .social-img {
+        transition: transform 0.2s;
+        &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .left-box {
+    // margin-top: 30px;
+    width: 50%;
+
+    @media (max-width: "425px") {
+      margin-top: 10px;
+    }
+
+    .site-name {
+      font-family: "Bungee", sans-serif;
+    }
+
+    .site-text-mobile {
+      display: none;
+      @media (max-width: "425px") {
+        display: block;
+        padding: 0;
+      }
+    }
+
+    .site-text {
+      @media (max-width: "425px") {
+        display: none;
+      }
+    }
+
+    p {
+      padding-right: 40%;
+      font-family: "CircularStd", sans-serif;
+    }
+  }
+  .right-box {
+    // margin-top: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    @media (max-width: "425px") {
+      margin-top: 10px;
+    }
+
+    h6 {
+      font-family: "Bungee", sans-serif;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: "425px") {
+        color: black;
+        display: none;
+      }
+
+      a {
+        color: white;
+        margin: 0;
+        font-family: "CircularStd", sans-serif;
+
+        &:hover {
+          color: rgb(211, 211, 211);
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        @media (max-width: "425px") {
+          color: black;
+        }
+      }
+    }
+    .product {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25%;
+
+      a {
+        color: white;
+        font-family: "CircularStd", sans-serif;
+
+        &:hover {
+          color: rgb(211, 211, 211);
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        @media (max-width: "425px") {
+          color: black;
+        }
+      }
+    }
+  }
+}

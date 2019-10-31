@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Footer from "./components/Footer";
 import MessageList from "./components/MessageList";
 import { connect } from "react-redux";
 
@@ -48,6 +49,7 @@ class App extends Component {
             component={() => <MessageList messages={this.props.messages} />}
           />
         </div>
+        <Footer />
       </Router>
     );
   }
