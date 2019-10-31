@@ -7,7 +7,7 @@
 .signup-card {
   height: 340px;
   margin: 30px auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   border-radius: 2px;
 }
 
@@ -71,13 +71,16 @@ input:focus {
 
 .login_btn {
   color: black;
-  background-color: #87bfff;
+  background-color: #65d5d1;
   width: 100px;
-}
 
-.login_btn:hover {
-  color: black;
-  background-color: white;
+  &:hover {
+    background-color: #3bbfc0;
+    border-color: #5ed0ce;
+  }
+  &:focus {
+    background-color: #3bbfc0;
+  }
 }
 
 .links {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signup } from "../actions/signupAction";
 import { Link } from "react-router-dom";
-import "../css/signup.css";
+import "../css/signup.scss";
 
 class Signup extends Component {
   state = {
@@ -32,54 +32,56 @@ class Signup extends Component {
       <div className="signup-bg">
         <div className="signup-container">
           <div className="d-flex justify-content-center h-100">
-            <div className="signup-card">
-              <div className="signup-card-header">
-                <h2>{this.props.displayText}</h2>
-              </div>
-              <div className="signup-card-body">
-                <form onSubmit={this.signup}>
-                  <div className="input-group form-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fas fa-user" />
-                      </span>
+            <div className="blurred-box">
+              <div className="signup-card">
+                <div className="signup-card-header">
+                  <h2>{this.props.displayText}</h2>
+                </div>
+                <div className="signup-card-body">
+                  <form onSubmit={this.signup}>
+                    <div className="input-group form-group">
+                      <div className="input-group-prepend">
+                        <span className="input-group-text">
+                          <i className="fas fa-user" />
+                        </span>
+                      </div>
+                      <input
+                        className="form-control"
+                        onChange={this.handleChange}
+                        placeholder="Create Username"
+                        value={this.state.username}
+                        name="username"
+                        type="text"
+                      />
                     </div>
-                    <input
-                      className="form-control"
-                      onChange={this.handleChange}
-                      placeholder="Create Username"
-                      value={this.state.username}
-                      name="username"
-                      type="text"
-                    />
-                  </div>
-                  <div className="input-group form-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fas fa-key" />
-                      </span>
+                    <div className="input-group form-group">
+                      <div className="input-group-prepend">
+                        <span className="input-group-text">
+                          <i className="fas fa-key" />
+                        </span>
+                      </div>
+                      <input
+                        className="form-control"
+                        onChange={this.handleChange}
+                        placeholder="Create Password"
+                        value={this.state.password}
+                        name="password"
+                        type="password"
+                      />
                     </div>
-                    <input
-                      className="form-control"
-                      onChange={this.handleChange}
-                      placeholder="Create Password"
-                      value={this.state.password}
-                      name="password"
-                      type="password"
-                    />
+                    <div className="form-group">
+                      <input
+                        type="submit"
+                        value="Sign Up"
+                        className="btn float-right login_btn"
+                      />
+                    </div>
+                  </form>
+                  <div className="col-md-12">
+                    <p>
+                      Already registered?<Link to="/login"> Login Here</Link>
+                    </p>
                   </div>
-                  <div className="form-group">
-                    <input
-                      type="submit"
-                      value="Sign Up"
-                      className="btn float-right login_btn"
-                    />
-                  </div>
-                </form>
-                <div className="col-md-12">
-                  <p>
-                    Already registered?<Link to="/login"> Login Here</Link>
-                  </p>
                 </div>
               </div>
             </div>

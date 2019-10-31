@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { login } from "../actions/loginAction";
 import { Link } from "react-router-dom";
 
-import "../css/login.css";
+import "../css/login.scss";
 
 class Login extends React.Component {
   state = {
@@ -76,7 +76,7 @@ class Login extends React.Component {
                   <div className="form-group">
                     <input
                       type="submit"
-                      value="Log In"
+                      value="Login"
                       className="btn float-right login_btn"
                     />
                   </div>

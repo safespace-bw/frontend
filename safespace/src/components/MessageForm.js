@@ -1,6 +1,6 @@
 import React from "react";
 import { addMessage } from "../actions/messageListAction";
-import "../css/messageForm.css";
+import "../css/messageForm.scss";
 import ReactPhoneInput from "react-phone-input-2";
 import "react-phone-input-2/dist/style.css";
 import { connect } from "react-redux";
@@ -99,16 +99,10 @@ class MessageForm extends React.Component {
 
                 <div className="buttonForm-group">
                   <Button
+                    className="form-sub-btn"
                     type="submit"
                     size="large"
                     variant="contained"
-                    style={{
-                      // color: "white",
-                      backgroundColor: "rgb(129,210,199)",
-                      // width: "200px",
-                      // height: "40px",
-                      borderRadius: "20px"
-                    }}
                   >
                     Send
                     <SendIcon style={{ marginLeft: "5px" }}></SendIcon>

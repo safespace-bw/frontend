@@ -10,26 +10,36 @@
   width: 30rem;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 12px 20px 10px rgba(0, 0, 0, 0.4);
 }
 
 .signup-card-header {
-  background-color: rgb(108, 99, 255);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #54c6d2;
   text-align: center;
   padding-top: 10px;
   color: black;
-  border-top: 1px solid black;
+  // border-top: 1px solid black;
+
+  h2 {
+    font-family: "Bungee", sans-serif;
+  }
 }
 
 .signup-card-body {
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
+
+  background: inherit;
+  backdrop-filter: blur(20px);
 }
 
 .social_icon span {
@@ -55,7 +65,7 @@
 
 .input-group-prepend span {
   width: 50px;
-  background-color: #87bfff;
+  background-color: #65bad4;
   color: black;
   border: 0;
 }
@@ -76,16 +86,16 @@ input:focus {
   margin-right: 5px;
 }
 
-.login_btn {
-  color: black;
-  background-color: rgba(108, 99, 255);
-  width: 100px;
-}
+// .login_btn {
+//   color: black;
+//   background-color: rgb(108, 99, 255);
+//   width: 100px;
+// }
 
-.login_btn:hover {
-  color: black;
-  background-color: white;
-}
+// .login_btn:hover {
+//   color: black;
+//   background-color: white;
+// }
 
 .links {
   color: white;

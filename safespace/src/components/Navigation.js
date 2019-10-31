@@ -60,6 +60,7 @@ const Navigation = props => {
       </>
     ) : (
       <>
+        <div className="filler"></div>
         <Navbar className="navbar" light expand="md" fixed={"top"}>
           <NavbarBrand href="/">
             <img

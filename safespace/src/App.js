@@ -48,8 +48,9 @@ class App extends Component {
             path="/messagelist"
             component={() => <MessageList messages={this.props.messages} />}
           />
+
+          <Footer />
         </div>
-        <Footer />
       </Router>
     );
   }

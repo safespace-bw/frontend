@@ -12,7 +12,20 @@
   top: -50px;
   left: 160px;
   border-radius: 50%;
-  background-color: rgb(108, 98, 252);
+  background-color: #54c6d2;
+}
+
+.form-sub-btn {
+  background-color: #5ed0ce !important;
+  border-color: #5ed0ce !important;
+
+  &:hover {
+    background-color: #3bbfc0 !important;
+    border-color: #5ed0ce !important;
+  }
+  &:focus {
+    background-color: #3bbfc0 !important;
+  }
 }
 
 .top-div {
@@ -20,7 +33,9 @@
   top: 0;
   height: 50px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #54c6d2;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .react-tel-input {
@@ -37,13 +52,14 @@
 #phoneinput {
   border-radius: 20px;
 }
-.phone-container {
+/* .phone-container {
   width: 60%;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
-}
+} */
 
 .card-title {
+  color: white !important;
   text-align: center;
   margin-bottom: 30px;
 }

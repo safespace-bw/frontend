@@ -26,6 +26,13 @@
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: 20px;
 } */
+/* 
+.home-bg {
+  background: url("../images/stars.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+} */
 
 .container {
   display: flex;
@@ -36,7 +43,9 @@
   height: 80%;
   padding: 0;
   margin-top: 100px;
-  border: 1px solid black;
+  margin-right: 10%;
+  margin-left: 10%;
+  /* border: 1px solid black; */
 
   height: 500px;
 }
@@ -56,17 +65,21 @@
   word-wrap: break-word;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  background-color: rgb(108, 98, 252);
+  border-radius: 15px;
+  background-color: inherit;
+  backdrop-filter: blur(20px);
   /* background-color: white; */
-  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 12px 20px 10px rgba(0, 0, 0, 0.4);
+  width: 50%;
 }
 .phone-container {
-  width: 60%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
   margin: 0 auto;
 }
 .react-tel-input .selected-flag {
+  background-color: #54c6d2;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
 }

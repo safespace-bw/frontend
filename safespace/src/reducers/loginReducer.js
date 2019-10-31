@@ -3,7 +3,7 @@ import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions";
 const initialLoginState = {
   token: "",
   id: "",
-  displayText: "Log In",
+  displayText: "Login",
   loggedIn: false,
   isLoading: false
 };
