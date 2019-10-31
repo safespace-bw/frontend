@@ -77,6 +77,9 @@
   width: 50%;
   /* background-color: rgba(0, 0, 0, 0.5); */
   margin: 0 auto;
+  padding-left: 15%;
+  /* background: url("../images/planets.jpg");
+  background-size: contain; */
 }
 .react-tel-input .selected-flag {
   background-color: #54c6d2;
@@ -101,30 +104,31 @@
 }
 
 .messages-outbox {
+  color: white;
   position: absolute;
   /* margin: 0 auto auto 240.4px; */
   text-align: center;
-  background: rgba(249, 200, 130);
-  width: 204px;
+  background: #35c2e1;
+  width: 205px;
   height: 30px;
   padding: 5px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 100px;
-  z-index: 2;
-  margin-left: -1px;
+  /* border-bottom-left-radius: 15px; */
+  /* border-bottom-right-radius: 15px; */
+  /* z-index: 2; */
   /* padding-right: 2px; */
   /* left: 5px; */
+  margin-left: -1px;
 }
 .sent-messages {
   max-height: 360px;
-  overflow: scroll;
+  overflow: hidden;
   width: 200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: left;
   align-items: flex-start;
-  padding: 40px 0 0 5px;
+  padding: 50px 0 0 5px;
 }
 
 .fade-enter {

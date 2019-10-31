@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/messages.css";
-import smiley from "../images/smiley.png"
+import smiley from "../images/safespacelogo1.png";
 
 class Messages extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class Messages extends React.Component {
             {!this.state.editing ? (
               <div className="text-container">
                 <div>
-                  <img className="me-Img" src={smiley} alt="smiley"/>
+                  <img className="me-Img" src={smiley} alt="smiley" />
                 </div>{" "}
                 <p>
                   {this.props.message.body}{" "}

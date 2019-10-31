@@ -87,10 +87,12 @@ const Navigation = props => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <Button className="signup-btn" color="primary">
-                  Log out
-                  <NavLink exact to="/" onClick={props.logOut}></NavLink>
-                </Button>
+                <NavLink exact to="/" onClick={props.logOut}>
+                  {" "}
+                  <Button className="signup-btn" color="primary">
+                    Log out{" "}
+                  </Button>
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
