@@ -2,7 +2,7 @@
 
 
 
-* this is the Front-End portion of the application *
+* this is the Front-End portion of the application * <br />
 Deploy: https://safespace-frontend.netlify.com/ 
 
 * landing-page:
