@@ -2,11 +2,11 @@
 
 
 
-* this is the Front-End portion of the application * <br />
-Deploy: https://safespace-frontend.netlify.com/ 
+This is the Front-End portion of the application * <br />
+  Deploy: https://safespace-frontend.netlify.com/ 
 
-* landing-page:
-  Deploy: https://safespace-landing.netlify.com/
+Landing-page:<br />
+  Deploy: https://safespace-landing.netlify.com/ <br />
   Code: https://github.com/AJLambda/Safespace-landing *
 
 # Safespace 
