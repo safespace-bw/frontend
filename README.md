@@ -6,8 +6,8 @@ This is the Front-End portion of the application * <br />
   Deploy: https://safespace-frontend.netlify.com/ 
 
 Landing-page:<br />
-  Deploy: https://safespace-landing.netlify.com/ <br />
-  Code: https://github.com/AJLambda/Safespace-landing *
+  Deploy: https://safespace.netlify.com/ <br />
+  Code: https://github.com/safespace-bw/UI *
 
 # Safespace 
 
@@ -81,5 +81,5 @@ Liz Baker: https://github.com/LizBaker
 
 ### User Interface
 
-Austin James: https://github.com/AJLambda
+Sydney Crumley: https://github.com/srsimps19
 
