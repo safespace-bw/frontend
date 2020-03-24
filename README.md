@@ -6,7 +6,7 @@ This is the Front-End portion of the application * <br />
   Deploy: https://safespace-frontend.netlify.com/ 
 
 Landing-page:<br />
-  Deploy: https://safespace.netlify.com/ <br />
+  Deploy: https://safespace-home.netlify.com/ <br />
   Code: https://github.com/safespace-bw/UI *
 
 # Safespace 
